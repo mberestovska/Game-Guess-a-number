@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16pt;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: url("rabbit.png");
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 90vh;
+}
+
+h1 {
+    color: darkblue;
+    text-shadow: 3px 3px 3px grey;
+    letter-spacing: 6px;
+    font-size: 40pt;
+}
+
+input {
+    height: 50px;
+    font-size: 16pt;
+    width: auto;
+}
+
+#start {
+    margin-right: 50px;
+}
+
+#number-input:hover {
+    box-shadow: 0 0 10px darkblue;
+}
+
+#answer {
+    padding: 20px;
+}
+.hidden {
+    visibility: hidden;
+}
+
+#block-1, #block-2, #block-3 {
+    width: 146px;
+    height: 160px;
+    display: inline-block;
+    position: absolute;
+    bottom: 10vh;
+    background-image: url("b1.png");
+    z-index: 0;
+}
+/* Animation whan the number is guessed */
+@keyframes win-win {
+    0% {bottom: 10vh;}
+    100% {bottom: 90vh;}
+}
+
+.move-to-top {
+    animation-name: win-win;
+    animation-duration: 5s;
+}
+
+#block-1 {
+    animation-timing-function: ease-in;
+}
+
+#block-2 {
+    animation-timing-function: linear;
+    left: 299px; 
+}
+
+#block-3 {
+    animation-timing-function: ease-out;
+    left: 460px;
+}
